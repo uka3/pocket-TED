@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+config/database.ymlについて
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+config/database.ymlは開発者の端末に依存するファイルになるため、通常gitでは.gitignoreファイル(任意的にgitに含めないためのファイル)に記述します。
+そのため、pullやcloneした際にconfig.database.ymlファイルが存在しないことになりますが、元々のファイルを,config/database.yml.sampleというファイルで残してありますので、このファイルの中身をコピってdatabase.fileを作成してください。
