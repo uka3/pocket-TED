@@ -69,4 +69,6 @@ Rails.application.configure do
     :password => "xxxxxxxxxx",
     :authentication => 'login',
   }
+
+  config.middleware.delete Rack::Lock
 end
