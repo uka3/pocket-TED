@@ -67,3 +67,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave'
 gem 'flowplayer'
 gem 'websocket-rails'
+gem 'faye-websocket', '0.10.0'

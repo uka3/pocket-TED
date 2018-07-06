@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+<div id="message_box">
+  <p>broadcast_message</p>
+</div>
+<input type="text" id="message_input">
+<input type="button" id="send_message" value="send">
+
+<script>
+$(document).ready(function(e){
+  var dispatcher = new WebSocketRails('loclahost:3000/websocket');
+
+  $(document).on("click","#send_message", function(e){
+    message_text = $("#message_input").val();
+    dispatcher.trigger("send_message", message_text);
+  });
+
+  dispatcher.bind("show_messge", function(message){
+    $("#message_box").append("<p>" + message + "</p>");
+  });
+  });
+});
+</script>
+
+<% else %>
+<% end %>

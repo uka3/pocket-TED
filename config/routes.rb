@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/index'
   resources :articles
   devise_for :users
   
