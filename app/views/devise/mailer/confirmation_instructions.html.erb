@@ -1,5 +1,13 @@
-<p>Welcome <%= @email %>!</p>
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+ </head>
+ <body>
+  <h1>Welcome!Dear,John! <%= @email %>!</h1>
 
-<p>You can confirm your account email through the link below:</p>
+  <h2>You can confirm your account email through the link below:</h2>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  <h3><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></h3>
+</body>
+</html>

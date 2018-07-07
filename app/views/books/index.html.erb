@@ -1,0 +1,18 @@
+<% @videos.each_with_index do |video, i| %>
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <%= link_to image_tag("p-ted-v.png" , { :class => "img-responsive"}), { :controller => "video", :action => "show", id: video[:id] } %>
+          <h3 class="video-title">
+            <%= link_to video[:title] , { :controller => "video", :action => "show", id: video[:id] } %>
+          </h3>
+          <p>
+            <%= link_to({:controller => "video", :action => "index", category:video.category[:id]}) do %>
+            <span class="label label-info"><%= video.category[:name] %></span>
+            <% end %>
+          </p>
+        </div>
+      </div>
+      <% end  %>
+      <!-- /.row -->
+
+      <%= render :partial => "sidebar", locals: { categories: @categories } %>

@@ -62,13 +62,15 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.action_mailer.smtp_settings = {
-    :enable_strttls_auto => true,
-    :adress => "smtp.gmail.com",
-    :port => 587,
-    :domain => "xxx@gmail.com",
-    :password => "xxxxxxxxxx",
-    :authentication => 'login',
+    adress: 'smtp@icloud.com',
+    port: '587',
+    domain: '',
+    user_name: '',
+    password: '',
+    authentication: :plain,
+    enable_strttls_auto: true
   }
 
   config.middleware.delete Rack::Lock
+  config.reconfirmable = false
 end
